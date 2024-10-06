@@ -1,5 +1,7 @@
 import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
 import { PiBuildingApartment } from "react-icons/pi";
+import Banner from "./Banner";
+import React from "react";
 
 const Header = () => {
   const menuItems = [
@@ -26,7 +28,8 @@ const Header = () => {
   ];
 
   return (
-    <Navbar maxWidth="2xl" disableAnimation isBordered>
+    <>
+    <Navbar maxWidth="2xl" disableAnimation isBordered className="bg-white container mx-auto">
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
 
@@ -84,6 +87,8 @@ const Header = () => {
         ))}
       </NavbarMenu>
     </Navbar>
+    <Banner />
+    </>
   );
 }
 
