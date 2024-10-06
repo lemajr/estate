@@ -4,7 +4,7 @@ import { Poppins, Roboto, Comfortaa } from 'next/font/google'
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/footer";
-import { Providers } from "./providers";
+// import { Providers } from "./providers"; for dark mode
 
  
 const roboto = Roboto({
@@ -47,13 +47,9 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} ${poppins.variable} ${comfortaa.variable} antialiased `}
       >
-        <Providers>
-        <main className="max-w-[1440px] mx-auto bg-white">
         <Header />
         {children}
         <Footer /> 
-        </main>
-        </Providers>
       </body>
     </html>
   );
