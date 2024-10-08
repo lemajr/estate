@@ -1,9 +1,8 @@
-import React from 'react'
-
-const footer = () => {
+export default function Footer() {
   return (
-    <div>footer</div>
+    <div className="container mx-auto mt-8 py-6 bg-black text-center flex justify-center items-center text-white">
+    <div className='mx-auto '>Copyright &copy; All rights reserved.</div>
+
+</div>
   )
 }
-
-export default footer

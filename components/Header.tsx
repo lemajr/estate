@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <>
-    <Navbar maxWidth="2xl" disableAnimation isBordered className="bg-white container mx-auto">
+    <Navbar maxWidth="2xl" disableAnimation isBordered className="container mx-auto">
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
 
