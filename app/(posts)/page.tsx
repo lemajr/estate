@@ -1,9 +1,7 @@
-import React from 'react'
-
-const Page = () => {
+export default function Posts () {
   return (
-    <div>Page</div>
+    <div className="container mx-auto bg-white py-10 px-14 h-dvh">
+      <h1>Posts</h1>
+    </div>
   )
 }
-
-export default Page

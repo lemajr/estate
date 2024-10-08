@@ -6,7 +6,7 @@ import { Button } from '@nextui-org/react'
  
  const Search = () => {
    return (
-     <div className='px-[30px] py-3 my-8 max-w-[1170px] 
+     <div className='px-[30px] py-3 mt-8 max-w-[1170px] 
      mx-auto flex flex-col lg:flex-row justify-between
       gap-4 lg:gap-x-3 lg:shadow-medium
        bg-white lg:bg-transparent lg:backdrop-blur rounded-lg'>
