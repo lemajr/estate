@@ -36,12 +36,3 @@
     @apply px-6 py-8 text-[15px] space-y-6 shadow-md bg-white absolute w-full z-10 list-none rounded-b-lg;
   }
 } 
-
-.grid {
-  height: 50%;
-  background-image:
-      linear-gradient(to right, rgb(203 213 225) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(203 213 225) 1px, transparent 1px);
-  background-size: 2.5rem 2.5rem;
-  background-position: center center;
-}

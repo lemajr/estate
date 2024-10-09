@@ -22,11 +22,11 @@ export default function CountyDropdown() {
       <Listbox value={selected} onChange={setSelected}>
         <ListboxButton
           className={clsx(
-            'relative block w-full rounded-t-lg bg-transparent border shadow-md py-1.5 pr-[6rem] pl-3 text-left text-base font-poppins font-medium',
+            'relative block w-full rounded-t-lg bg-transparent border shadow-md py-2 mr-[9rem] pl-3 text-left text-base font-poppins font-medium',
             'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
           )}
         >
-         <div className='flex flex-row gap-6 items-center'>
+         <div className='inline-flex gap-4 items-center'>
          <IoLocationOutline
            className="group pointer-events-none  top-2.5 left-2.5 size-6 text-blue-500"
             aria-hidden="true"

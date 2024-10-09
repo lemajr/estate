@@ -4,10 +4,9 @@ import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headless
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid'
 import clsx from 'clsx'
 import { useState } from 'react'
-import { IoLocationOutline } from 'react-icons/io5'
 import { RiWallet3Line } from 'react-icons/ri'
 
-const location = [
+const price = [
   { id: 1, name: 'Price range (any)' },
   { id: 2, name: '100000 - 130000' },
   { id: 3, name: '140000 - 170000' },
@@ -16,20 +15,20 @@ const location = [
 ]
 
 export default function PriceRangeDropdown() {
-  const [selected, setSelected] = useState(location[1])
+  const [selected, setSelected] = useState(price[1])
 
   return (
     <div className="">
       <Listbox value={selected} onChange={setSelected}>
         <ListboxButton
           className={clsx(
-            'relative block w-full rounded-t-lg bg-transparent border shadow-md py-1.5 pr-[6rem] pl-3 text-left text-base font-poppins font-medium',
+            'relative block w-full rounded-t-lg bg-transparent border shadow-md py-2 mr-[9rem] pl-3 text-left text-base font-poppins font-medium',
             'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
           )}
         >
-         <div className='flex flex-row gap-6 items-center'>
+         <div className='inline-flex  gap-4 items-center'>
          <RiWallet3Line
-           className="group pointer-events-none  top-2.5 left-2.5 size-6 text-blue-500"
+           className="group pointer-events-none  top-2.5 left-2.5 size-5 text-blue-500"
             aria-hidden="true"
           />
           <div>
@@ -51,14 +50,14 @@ export default function PriceRangeDropdown() {
             'transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0 z-50'
           )}
         >
-          {location.map((location) => (
+          {price.map((price) => (
             <ListboxOption
-              key={location.name}
-              value={location}
+              key={price.name}
+              value={price}
               className="group flex cursor-default items-center gap-2 rounded-lg py-1.5 px-3 select-none data-[focus]:bg-blue-100"
             >
               <CheckIcon className="invisible size-4 fill-blue-500 group-data-[selected]:visible" />
-              <div className="text-sm/6 ">{location.name}</div>
+              <div className="text-sm/6 ">{price.name}</div>
             </ListboxOption>
           ))}
         </ListboxOptions>
