@@ -10,15 +10,14 @@ const config: Config = {
 
   ],
   theme: {
-    fontFamily: { 
-      poppins: [ 'var(--font-poppins)'],
-      roboto: [ 'var(--font-roboto)'],
-      comfortaa: [ 'var(--font-comfortaa)'],
+    fontFamily: {
+      poppins: ['var(--font-poppins)'],
+      roboto: ['var(--font-roboto)'],
+      comfortaa: ['var(--font-comfortaa)'],
     },
     extend: {
-      backgroundImage: {
-        'grid-pattern': `linear-gradient(to right, #e0e0e0 1px, transparent 1px), 
-                         linear-gradient(to bottom, #e0e0e0 1px, transparent 1px)`,
+      fontVariantNumeric: {
+        'oldstyle-nums': 'oldstyle-nums',
       },
     },
   },

@@ -1,7 +1,8 @@
-import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, NavbarContent, NavbarItem, Button} from "@nextui-org/react";
 import { PiBuildingApartment } from "react-icons/pi";
 import Banner from "./Banner";
 import React from "react";
+import Link from "next/link";
 
 const Header = () => {
   const menuItems = [
@@ -37,8 +38,10 @@ const Header = () => {
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarBrand>
         <div className="flex flex-nowrap justify-items-end items-end gap-2">
-           <PiBuildingApartment className="size-7 text-gray-950" />
-          <p className="font-bold text-inherit uppercase hidden sm:flex">Sam Apartment</p>
+          <a href="/">
+          <PiBuildingApartment className="size-7 text-gray-950" />
+          <p className="font-bold text-inherit uppercase hidden sm:flex">Sam Apartment</p> 
+          </a>
         </div>
         </NavbarBrand>
       </NavbarContent>
@@ -49,8 +52,11 @@ const Header = () => {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
         <div className="flex flex-nowrap justify-items-end items-end gap-2">
+        <Link className="inline-flex justify-items-end items-end gap-2" href="/">
+
            <PiBuildingApartment className="size-8 text-gray-950" />
           <p className="font-bold text-inherit uppercase">Sam Apartment</p>
+        </Link>
         </div>
         </NavbarBrand>
         
@@ -79,7 +85,6 @@ const Header = () => {
                 index === 1 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
               }
               href="#"
-              size="lg"
             >
               {id.label}
             </Link>

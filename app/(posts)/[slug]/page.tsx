@@ -3,8 +3,11 @@ import Post from "@/app/images/image-2.jpg";
 import Profile from "@/app/images/profile.jpg";
 import { BiArea, BiBath, BiBed } from "react-icons/bi";
 import Link from "next/link";
+import ModalButton from "@/components/ModalButton";
+import { Button } from "@nextui-org/react";
 
 const SinglePost = () => {
+
   return (
     <div className="container mx-auto px-4 md:px-6 py-14 min-h-[800px] bg-white">
       <div className="max-w-6xl mx-auto">
@@ -63,9 +66,10 @@ const SinglePost = () => {
               <div className="font-bold text-lg">
                 <p>Erick B. Lema</p>
               </div>
-              <Link className="text-blue-500 text-sm" href="/">
-              View Listings
-              </Link>
+          
+              <Link href="https://twitter.com/ericktek_" className="text-blue-500 text-sm" >
+          @lemajr
+        </Link>
             </div>
           </div>
           <div>
@@ -76,8 +80,8 @@ const SinglePost = () => {
             <input placeholder="Phone*" className="border border-gray-300 focus:border-blue-700 outline-none rounded w-full px-4 h-14 text-sm" type="text" />
             <textarea placeholder="Message*" defaultValue="Hello, I am interested in [ Modern apartment ]" className="border border-gray-300 focus:border-blue-700 outlinr-none resize-none rounderd w-full p-4 h-36 text-sm text-gray-400"></textarea>
             <div className="flex gap-x-2">
-              <button className="bg-blue-500 hover:bg-blue-800 text-white rounded p-4 text-sm w-full transition">Send message</button>
-              <button className="border border-blue-700 text-blue-700 hover:border-blue-500 rounded p-4 text-sm w-full transition">Call</button>
+              <Button className="bg-blue-500 h-[50px] hover:bg-blue-800 text-white rounded p-4 text-sm w-full transition">Send message</Button>
+              <ModalButton/>
             </div>
           </form>
           </div>
