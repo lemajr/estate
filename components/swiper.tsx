@@ -24,14 +24,14 @@ import SkeletonComponent from './skeleton';
 const Slider = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(true); // Initially set loading to true
+  const [isLoading, setIsLoading] = useState(true); 
 
   useEffect(() => {
     // Simulate an image loading process
     const loadImages = async () => {
       // Replace with actual loading logic if needed
       await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate loading delay
-      setIsLoading(false); // Set loading to false after images are loaded
+      setIsLoading(false); 
     };
 
     loadImages();

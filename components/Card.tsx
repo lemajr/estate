@@ -1,11 +1,33 @@
+'use client'
 import Image from "next/image"
 import House from "@/app/images/image-1.jpg"
 import { BiArea, BiBath, BiBed } from "react-icons/bi"
 import Link from "next/link"
+import { useEffect, useState } from "react"
+import SkeletonCard from "./skeletonCard"
 
 
 const Card = () => {
-  return (
+
+  const [isLoading, setIsLoading] = useState(true); 
+
+  useEffect(() => {
+    // Simulate an image loading process
+    const loadImages = async () => {
+      // Replace with actual loading logic if needed
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate loading delay
+      setIsLoading(false); 
+    };
+
+    loadImages();
+  }, []);
+
+  return isLoading ? (
+    <>
+    <SkeletonCard />
+    </>
+  )
+  : (
     <>
    <Link href="/1">
    <div className="bg-white shadow-md p-5 rounded-lg w-full max-w-[360px] mx-auto cursor-pointer hover:shadow-2xl transition">
