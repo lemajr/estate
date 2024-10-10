@@ -87,7 +87,6 @@ const Header = () => {
         ))}
       </NavbarMenu>
     </Navbar>
-    <Banner />
     </>
   );
 }

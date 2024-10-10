@@ -1,115 +1,92 @@
-// // 'use client'
-// // import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
+import Image from "next/image";
+import Post from "@/app/images/image-2.jpg";
+import Profile from "@/app/images/profile.jpg";
+import { BiArea, BiBath, BiBed } from "react-icons/bi";
+import Link from "next/link";
 
-// // const DropMenu = () => {
-// //   return (
-// //    <div className="p-64">
-// //      <Dropdown>
-// //       <DropdownTrigger>
-// //         <Button 
-// //           variant="bordered" 
-// //         >
-// //           Tanzania 
-// //           select your country
-// //         </Button>
-// //       </DropdownTrigger>
-// //       <DropdownMenu 
-// //         aria-label="Action event example" 
-// //         onAction={(key) => alert(key)}
-// //       >
-// //         <DropdownItem key="new">New file</DropdownItem>
-// //         <DropdownItem key="copy">Copy link</DropdownItem>
-// //         <DropdownItem key="edit">Edit file</DropdownItem>
-// //         <DropdownItem key="delete" className="text-danger" color="danger">
-// //           Delete file
-// //         </DropdownItem>
-// //       </DropdownMenu>
-// //     </Dropdown>
-// //    </div>
-// //   );
-// // }
-
-// // export default DropMenu;
-// 'use client'
-
-// import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react'
-// import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid'
-// import clsx from 'clsx'
-// import { useState } from 'react'
-// import { IoLocationOutline } from 'react-icons/io5'
-
-// const location = [
-//   { id: 1, name: 'Lacation (any)' },
-//   { id: 2, name: 'Dar es salaam' },
-//   { id: 3, name: 'Mwanza' },
-//   { id: 4, name: 'Dodoma' },
-//   { id: 5, name: 'Arusha' },
-// ]
-
-// export default function Example() {
-//   const [selected, setSelected] = useState(location[1])
-
-//   return (
-//     <div className="mx-auto h-screen w-52 pt-20">
-//       <Listbox value={selected} onChange={setSelected}>
-//         <ListboxButton
-//           className={clsx(
-//             'relative block w-full rounded-t-lg bg-transparent py-1.5 pr-8 pl-3 text-left text-base font-poppins font-medium text-white',
-//             'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
-//           )}
-//         >
-//          <div className='flex flex-row gap-6 items-center'>
-//          <IoLocationOutline
-//            className="group pointer-events-none  top-2.5 left-2.5 size-6 text-blue-200"
-//             aria-hidden="true"
-//           />
-//           <div>
-//           {selected.name}
-//           <p className='text-xs'>Select your place</p>
-//           </div>
-//           <ChevronDownIcon
-//             className="group pointer-events-none absolute top-2.5 right-2.5 size-4 fill-white"
-//             aria-hidden="true"
-//           />
-      
-//          </div>
-//         </ListboxButton> 
-//         <ListboxOptions
-//           anchor="bottom"
-//           transition
-//           className={clsx(
-//             'w-[var(--button-width)] rounded-b-xl border border-white/5 bg-gray-500 p-1 [--anchor-gap:var(--spacing-1)] focus:outline-none',
-//             'transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0'
-//           )}
-//         >
-//           {location.map((location) => (
-//             <ListboxOption
-//               key={location.name}
-//               value={location}
-//               className="group flex cursor-default items-center gap-2 rounded-lg py-1.5 px-3 select-none data-[focus]:bg-black"
-//             >
-//               <CheckIcon className="invisible size-4 fill-white group-data-[selected]:visible" />
-//               <div className="text-sm/6 text-white">{location.name}</div>
-//             </ListboxOption>
-//           ))}
-//         </ListboxOptions>
-//       </Listbox>
-//     </div>
-//   )
-// }
-
-
-
-
-
-
-
-import React from 'react'
-
-const page = () => {
+const SinglePost = () => {
   return (
-    <div className='grid'></div>
-  )
-}
+    <div className="container mx-auto px-4 md:px-6 py-14 min-h-[800px] bg-white">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-y-3 lg:items-center lg:justify-between mb-6">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold">House</h2>
+            <h3 className="text-lg md:text-xl">Changanyikeni Makongo, Kawe</h3>
+          </div>
+          <div className="mb-4 lg:mb-0 flex gap-x-2 text-xs md:text-sm">
+            <div className="bg-green-500 text-white px-3 py-1 rounded-full">House</div>
+            <div className="bg-blue-500 text-white px-3 py-1 rounded-full">Tanzania</div>
+          </div>
+          <div className="text-xl md:text-2xl font-semibold text-blue-500">
+            Tsh 14,000,000/=
+          </div>
+        </div>
+        <div className="flex flex-col lg:flex-row gap-8">
+          <div className="w-full lg:w-[65%] ">
+            <div className="mb-8">
+              <Image
+                src={Post}
+                className="w-full lg:h-96 md:lg-96 xl:h-[28rem] h-72 object-cover"
+                width={500}
+                height={500}
+                alt="single post"
+              />
+            </div>
+           <div className="flex gap-x-6 text-blue-500 mb-6">
+           <div className="flex gap-x-2 items-center">
+              <BiBed className="text-2xl" />
+              <div>6</div>
+            </div>
+            <div className="flex gap-x-2 items-center">
+              <BiBath className="text-2xl" />
+              <div>2</div>
+            </div>
+            <div className="flex gap-x-2 items-center">
+              <BiArea className="text-2xl"  />
+              <div>2200 sq ft</div>
+            </div>
+           </div>
+           <div>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor quam dolores qui expedita quis voluptatibus minima, aliquid error voluptas facere laudantium alias quo culpa mollitia eos illum modi corrupti. Quia.
+            </p>
+           </div>
+          </div>
+          <div className="w-full lg:w-[35%] ">
+          <div className=" bg-white w-full mb-8 border border-gray-300 rounded-lg px-6 py-8">
+            {/* profile Agent */}
+          <div className="flex items-center gap-x-4 mb-8">
+            <div className="size-20 p-1 border border-gray-300 rounded-full">
+              <Image src={Profile} className="rounded-full " width={500} height={500} alt="profile" />
+            </div>
+            <div>
+              <div className="font-bold text-lg">
+                <p>Erick B. Lema</p>
+              </div>
+              <Link className="text-blue-500 text-sm" href="/">
+              View Listings
+              </Link>
+            </div>
+          </div>
+          <div>
+            {/* Contact FOrm */}
+          <form className="flex flex-col gap-y-4" action="">
+            <input placeholder="Name*" className="border border-gray-300 focus:border-blue-700 outline-none rounded w-full px-4 h-14 text-sm" type="text" />
+            <input placeholder="Email*" className="border border-gray-300 focus:border-blue-700 outline-none rounded w-full px-4 h-14 text-sm" type="text" />
+            <input placeholder="Phone*" className="border border-gray-300 focus:border-blue-700 outline-none rounded w-full px-4 h-14 text-sm" type="text" />
+            <textarea placeholder="Message*" defaultValue="Hello, I am interested in [ Modern apartment ]" className="border border-gray-300 focus:border-blue-700 outlinr-none resize-none rounderd w-full p-4 h-36 text-sm text-gray-400"></textarea>
+            <div className="flex gap-x-2">
+              <button className="bg-blue-500 hover:bg-blue-800 text-white rounded p-4 text-sm w-full transition">Send message</button>
+              <button className="border border-blue-700 text-blue-700 hover:border-blue-500 rounded p-4 text-sm w-full transition">Call</button>
+            </div>
+          </form>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default page
+export default SinglePost;
