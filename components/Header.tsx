@@ -1,7 +1,5 @@
 import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, NavbarContent, NavbarItem, Button} from "@nextui-org/react";
 import { PiBuildingApartment } from "react-icons/pi";
-import Banner from "./Banner";
-import React from "react";
 import Link from "next/link";
 
 const Header = () => {
