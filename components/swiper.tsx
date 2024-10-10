@@ -42,7 +42,7 @@ const Slider = () => {
       <SkeletonComponent />
     ) : (
       <>
-        <div className="flex-1 w-full rounded-r-2xl lg:w-1/2 h-[34rem]  pt-8">
+        <div className="flex-1 w-full rounded-r-2xl lg:w-1/2 lg:h-[34rem] h-72 pt-8">
           {/* Main Slider */}
           <Swiper
             spaceBetween={10}
