@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import Post from "@/app/images/image-2.jpg";
 import Profile from "@/app/images/profile.jpg";
@@ -5,8 +6,22 @@ import { BiArea, BiBath, BiBed } from "react-icons/bi";
 import Link from "next/link";
 import ModalButton from "@/components/ModalButton";
 import { Button } from "@nextui-org/react";
+import { useEffect, useState } from "react"
+import SkeletonSinglePost from "@/components/SkeletonSinglePost";
 
 const SinglePost = () => {
+  const [isLoading, setIsLoading] = useState(true); 
+
+  useEffect(() => {
+    // Simulate an image loading process
+    const loadImages = async () => {
+      // Replace with actual loading logic if needed
+      await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate loading delay
+      setIsLoading(false); 
+    };
+
+    loadImages();
+  }, []);
 
   return (
     <div className="container mx-auto px-4 md:px-6 py-14 min-h-[800px] bg-white">
@@ -27,13 +42,17 @@ const SinglePost = () => {
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="w-full lg:w-[65%] ">
             <div className="mb-8">
+              {isLoading ? (
+                <SkeletonSinglePost />
+              ) : (
               <Image
                 src={Post}
                 className="w-full lg:h-96 md:lg-96 xl:h-[28rem] h-72 object-cover"
                 width={500}
                 height={500}
                 alt="single post"
-              />
+              /> 
+            )}
             </div>
            <div className="flex gap-x-6 text-blue-500 mb-6">
            <div className="flex gap-x-2 items-center">
